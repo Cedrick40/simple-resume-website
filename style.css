@@ -1,0 +1,197 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f3f7fc;
+  color: #23324a;
+  padding: 30px 15px;
+}
+
+/* Page layout with CSS Grid: sidebar on the left, content on the right */
+.resume {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #d5dfee;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  background-color: #1f5fbf;
+  color: #ffffff;
+  padding: 40px 28px;
+}
+
+.sidebar h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 1.15;
+}
+
+.job-title {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #cfe0f7;
+}
+
+.sidebar section {
+  margin-top: 34px;
+}
+
+.sidebar h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.sidebar h3 {
+  font-size: 0.85rem;
+  font-weight: normal;
+  color: #cfe0f7;
+  margin: 16px 0 6px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  font-size: 0.92rem;
+  margin-bottom: 6px;
+}
+
+address {
+  font-style: normal;
+}
+
+.label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #cfe0f7;
+}
+
+#contact li {
+  margin-bottom: 12px;
+}
+
+.sidebar a {
+  color: #ffffff;
+  overflow-wrap: anywhere;
+}
+
+.sidebar a:hover {
+  text-decoration: none;
+}
+
+/* ---------- Main content ---------- */
+main {
+  padding: 40px;
+}
+
+main section {
+  margin-bottom: 34px;
+}
+
+main section:last-child {
+  margin-bottom: 0;
+}
+
+main h2 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #1f5fbf;
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #d5dfee;
+}
+
+/* One entry = one job, school or project */
+.entry {
+  margin-bottom: 22px;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+/* Flexbox: title on the left, date on the right */
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 15px;
+}
+
+.entry h3 {
+  font-size: 1.05rem;
+  color: #16325c;
+}
+
+.dates {
+  font-size: 0.85rem;
+  color: #6b7a90;
+  white-space: nowrap;
+}
+
+.place {
+  font-size: 0.92rem;
+  color: #4a5b73;
+  margin-bottom: 6px;
+}
+
+main ul {
+  padding-left: 18px;
+}
+
+main li {
+  font-size: 0.97rem;
+  margin-bottom: 5px;
+}
+
+main li::marker {
+  color: #1f5fbf;
+}
+
+/* ---------- Small screens: one column ---------- */
+@media (max-width: 760px) {
+  body {
+    padding: 0;
+  }
+
+  .resume {
+    grid-template-columns: 1fr;
+    border: none;
+  }
+
+  .sidebar {
+    padding: 30px 22px;
+  }
+
+  main {
+    padding: 28px 22px;
+  }
+
+  .entry-head {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .dates {
+    white-space: normal;
+  }
+}
